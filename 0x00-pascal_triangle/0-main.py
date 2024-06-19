@@ -2,15 +2,15 @@
 """
 0-main
 """
-generer_triangle_pascal = __import__('0-pascal_triangle').generer_triangle_pascal
+pascal_triangle = __import__('0-pascal_triangle').pascal_triangle
 
-def afficher_triangle(triangle):
+def print_triangle(triangle):
     """
-    Afficher le triangle
+    Print the triangle
     """
-    for ligne in triangle:
-        print("[{}]".format(",".join([str(element) for element in ligne])))
+    for row in triangle:
+        print("[{}]".format(",".join([str(x) for x in row])))
 
 
 if __name__ == "__main__":
-    afficher_triangle(generer_triangle_pascal(5))
+    print_triangle(pascal_triangle(5))
