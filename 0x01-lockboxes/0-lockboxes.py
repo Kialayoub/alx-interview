@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Method to determine if all boxes can be opened
-Using prototype: def canUnlockAll(boxes)
 """
 
 
@@ -9,12 +8,12 @@ def canUnlockAll(boxes):
     """
     Check if boxes can be unlocked
     """
-    for key in range(1, len(boxes) - 1):
-        ctr = False
+    for k in range(1, len(boxes) - 1):
+        c = False
         for idx in range(len(boxes)):
-            ctr = (key in boxes[idx] and key != idx)
-            if ctr:
+            c = (k in boxes[idx] and k != idx)
+            if c:
                 break
-        if ctr is False:
-            return ctr
+        if c is False:
+            return c
     return True
