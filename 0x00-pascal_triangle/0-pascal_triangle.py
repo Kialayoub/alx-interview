@@ -1,22 +1,24 @@
 #!/usr/bin/python3
 """
-0-triangle_pascal
+0-pascal_triangle
 """
 
-def generer_triangle_pascal(taille):
+
+def pascal_triangle(n):
     """
-    Renvoie une liste d'entiers
-    représentant le triangle de Pascal de taille 'taille'
-    renvoie une liste vide si taille <= 0
+    Returns a list of integers
+    representing the Pascal Triangle of n
+    returns empty list if n <= 0
     """
-    triangle = []
-    if taille <= 0:
-        return triangle
-    triangle = [[1]]
-    for i in range(1, taille):
-        ligne = [1]
-        for j in range(len(triangle[i - 1]) - 1):
-            ligne.append(triangle[i - 1][j] + triangle[i - 1][j + 1])
-        ligne.append(1)
-        triangle.append(ligne)
-    return triangle
+    k = []
+    if n <= 0:
+        return k
+    k = [[1]]
+    for i in range(1, n):
+        temp = [1]
+        for j in range(len(k[i - 1]) - 1):
+            curr = k[i - 1]
+            temp.append(k[i - 1][j] + k[i - 1][j + 1])
+        temp.append(1)
+        k.append(temp)
+    return k
